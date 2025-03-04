@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+    <style>
+        body,html{
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+        }
+        .Conatainer{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        .box{
+            width: 300px;
+            background-color: lightpink;
+            border: 2px solid black;
+            border-radius: 20px;
+        
+        }
+        p{
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 250%;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+        #B2{
+            color: whitesmoke;
+            background-color: black;
+            margin: 20px; 
+            border-radius: 50%;
+            size: 20px;
+        
+        }
+        #B1{
+            color: whitesmoke;
+            background-color: black;
+            margin: 20px;
+            size: 20px;
+            border-radius: 50%;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="Conatainer">
+        <div class="box">
+            <p id="number">0</p>
+            <button  id= "B1" onclick="minus()">-</button>
+            <button id="B2" onclick="plus()">+</button>
+        </div>
+    </div>
+
+    <script>
+        let counter = 0;
+        
+        function plus() {
+            document.getElementById("number").textContent = ++counter;
+        }
+
+        function minus() {
+            document.getElementById("number").textContent = --counter;
+        }
+    </script>
+</body>
+</html>
